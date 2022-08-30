@@ -1,0 +1,30 @@
+.miNav{
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+    font-weight: bold;
+    border: solid salmon;
+    .barrita {
+        margin: 1.3%;
+        .barritajr {
+            .barritabb {
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                .itemDelMenu {
+                    transition: color .3s;
+                    &:hover {
+                        color: $verde-power;
+                    }
+                }
+            }
+            .barritachild{
+                width: 10%;
+                @include miflexbox(flex, row, flex-end);
+                margin-right: 0%;
+                padding-right: 0%;
+                font-size: 12px;
+            }
+        }
+    }
+}

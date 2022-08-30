@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+	padding: 0;
+    cursor: url(././../assets/cursorlindo.png), auto;
+    background: $miwhite;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background: $black;
+    cursor: url(././../assets/cursorlindo.png), auto;
+}
+body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.863);
+    border-radius: 50px;
+    transition: color .3s;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: $verde-light;
+}
+
+
+.bodyBox {
+    font-family: 'Oswald', sans-serif;
+    background-color: $miwhite;
+    a {
+        cursor: url(././../assets/cursorclic.png), auto;
+    }
+}
