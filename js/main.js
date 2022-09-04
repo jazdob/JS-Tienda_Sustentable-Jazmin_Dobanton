@@ -124,7 +124,7 @@ while (intentos <3) {
 
 
 
-/* ENTREGA "Desafío: Simulador interactivo" */
+/* OK ENTREGADO Y APROBADO "Desafío: Simulador interactivo" 
 
 
 function solicitarNombre() {
@@ -197,4 +197,88 @@ console.log(aPagar);
 let formaDePago = medioDePago();
 console.log(formaDePago);
 
-resumen(nombreProducto,aPagar,formaDePago)
+resumen(nombreProducto,aPagar,formaDePago) */
+
+
+
+/* ENTREGA: "Desafío complementario: Incorporar Arrays"
++ "Primera entrega del Proyecto Final"*/
+
+const productos = [
+    { cod: 1, nombre: "cepillo", precio: 100, img: "cepillo.jpg" },
+    { cod: 2, nombre: "shampoo", precio: 200, img: "shampoo.jpg" },
+    { cod: 3, nombre: "acondicionador", precio: 300, img: "acondicionador.jpg" },
+    { cod: 4, nombre: "esponja", precio: 400, img: "esponja.jpg" },
+    { cod: 5, nombre: "jabon", precio: 500, img: "jabon.jpg" },
+    { cod: 6, nombre: "jabonera", precio: 600, img: "jabonera.jpg" },
+  ];
+  console.log(productos);
+  
+  function Producto(cod, nombre, precio, img) {
+    this.cod = cod;
+    this.nombre = nombre;
+    this.precio = precio;
+    this.img = img;
+  }
+  
+  const nuevoProducto = new Producto(7, "vela", 700, "vela.JPG");
+  
+  function cargarProducto(arr, valor) {
+    arr.push(valor);
+  }
+  
+  cargarProducto(productos, nuevoProducto);
+  
+  function filtrarProducto(arr, filtro) {
+    const filtrado = arr.filter((el) => {
+      return el.nombre.includes(filtro) || el.precio < 600;
+    });
+    return filtrado;
+  }
+  
+  /* let ingreso = prompt("Ingresa un producto a buscar");
+  
+  const resultado = filtrarProducto(productos, ingreso.toLocaleLowerCase());
+  
+  const carrito = [];
+  cargarProducto(carrito, resultado);
+  
+  for (const elemento of resultado) {
+    carrito.push(elemento);
+  } */
+  /* 
+  console.log(resultado);
+  console.log(carrito); */
+  
+  /* function buscarPorNombre(arr, filtro) {
+    const encontrado = arr.find((el) => {
+      return el.nombre === filtro;
+    });
+    return encontrado;
+  }
+  
+  const encontrado = buscarPorNombre(productos, ingreso);
+  
+  console.log(encontrado); */
+  
+  let porPrecio = prompt(
+    "Selecciona una criterio de ordenamiento \n 1 - Menor precio \n 2 - Mayor precio"
+  );
+  
+  function filtrarPorPrecio(arr, filtro) {
+    let valor = prompt("Ingresa el importe");
+  
+    return arr.filter((el) => {
+      switch (filtro) {
+        case "1":
+          return el.precio < valor;
+          break;
+        case "2":
+          return el.precio > valor;
+          break;
+      }
+    });
+  }
+  const precio = filtrarPorPrecio(productos, porPrecio);
+  console.log(precio);
+  
