@@ -138,7 +138,7 @@ body::-webkit-scrollbar-thumb:hover {
 .miFooter .formFooter .formEmail .miInputFooter {
   border-radius: 20px;
   border: 1px solid #6eb435;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(217, 169, 248, 0.842);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(182, 248, 169, 0.842);
 }
 .miFooter .formFooter .boxBtnFooter {
   text-align: center;
@@ -175,6 +175,14 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 80%;
 }
 
+.bodyBox .boxSearch .miFormSearch .miInputSearch {
+  border-radius: 20px;
+  border: 1px solid #6eb435;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(182, 248, 169, 0.842);
+}
+.bodyBox .boxSearch .miFormSearch .boxCheck .miCheck {
+  color: #6eb435;
+}
 .bodyBox .cv {
   margin: 0%;
   margin-top: 2%;

@@ -201,33 +201,39 @@ resumen(nombreProducto,aPagar,formaDePago) */
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
-/* ENTREGA: "Desafío complementario: Incorporar Arrays"
+/* OK ENTREGADO Y APROBADO: "Desafío complementario: Incorporar Arrays"
 + "Primera entrega del Proyecto Final"*/
+
+//COPIAR CODIGO
+
+/* Entrega: "Desafío comp.: Interactuar con HTML"
++ "Desafío: Incorporar eventos"*/
 
 /* ARRAY Productos */
 
 const productos = [
-    { cod: 1, nombre: "cepillo", precio: 100, img: "cepillo.jpg" },
+    { cod: 1, nombre: "cepillo", precio: 100, categoria: "capilar", img: "cepillo.jpg" },
     { cod: 2, nombre: "shampoo", precio: 200, img: "shampoo.jpg" },
-    { cod: 3, nombre: "acondicionador", precio: 300, img: "acondicionador.jpg" },
-    { cod: 4, nombre: "esponja", precio: 400, img: "esponja.jpg" },
-    { cod: 5, nombre: "jabon", precio: 500, img: "jabon.jpg" },
-    { cod: 6, nombre: "jabonera", precio: 600, img: "jabonera.jpg" },
+    { cod: 3, nombre: "acondicionador", precio: 300, categoria: "capilar", img: "acondicionador.jpg" },
+    { cod: 4, nombre: "esponja", precio: 400, categoria: "accesorios", img: "esponja.jpg" },
+    { cod: 5, nombre: "jabon", precio: 500, categoria: "corporal", img: "jabon.jpg" },
+    { cod: 6, nombre: "jabonera", precio: 600, categoria: "accesorios", img: "jabonera.jpg" },
   ];
   console.log(productos);
 
   /* Constructor */
   
-  function Producto(cod, nombre, precio, img) {
+  function Producto(cod, nombre, precio, categoria, img) {
     this.cod = cod;
     this.nombre = nombre;
     this.precio = precio;
+    this.categoria = categoria;
     this.img = img;
   }
 
   /* Método push constructor */
   
-  const nuevoProducto = new Producto(7, "vela", 700, "vela.JPG");
+  const nuevoProducto = new Producto(7, "vela", 700, "accesorios", "vela.JPG");
   
   function cargarProducto(arr, valor) {
     arr.push(valor);
