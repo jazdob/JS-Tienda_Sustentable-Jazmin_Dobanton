@@ -1,0 +1,45 @@
+.miFooter {
+    padding: 2%;
+    padding-bottom: 0%;
+    .formFooter {
+        @include miflexbox(flex, row, space-between);
+        padding-top: 3%;
+        padding-bottom: 2%;
+        .formEmail {
+            width: 80%;
+            .miInputFooter {
+                border-radius: 20px;
+                border: 1px solid $verde-power;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(217, 169, 248, 0.842);
+            }
+        }
+        .boxBtnFooter {
+            text-align: center;
+            width: 20%;
+        }
+    }
+    .socialMediaIcon {
+        padding-top: 1%;
+        padding-bottom: 2%;
+        @include miflexbox(flex, row, center);
+        .boxIcons{
+            @include miflexbox(flex, row, space-between);
+            width: 25%;
+            padding-left: 2%;
+            padding-right: 2%;
+            .miIcon {
+                font-size: 180%;
+                opacity: 80%;
+                color: $black;
+                transition: opacity .3s;
+                &:hover {
+                    opacity: 100%;
+                }
+            }
+        }
+    }
+    .footer__derechos {
+        @include miflexbox(flex, row, space-between);
+        font-size: 80%;
+    } 
+}

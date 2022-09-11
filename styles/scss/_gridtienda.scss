@@ -1,0 +1,47 @@
+.bodyBox {
+    .cv {
+        margin: 0%;
+        margin-top: 2%;
+        padding: 3%;
+        .miCard {
+                padding: 2%;
+                padding-top: 3%;
+                -webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;
+                animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;
+                @for $tarjetitas from 1 through 6 {
+                &:nth-child(#{$tarjetitas}) {
+                animation-delay: 0.09s * $tarjetitas;
+                }
+                } 
+            .boxImgCv {
+                text-align: justify;
+                border: 0.01px;
+                margin-top: 2%;
+                .imgCv {
+                    padding: 5%;
+                }
+                .miCardBody {
+                    padding-top: 4%;
+                  
+                    .miCardTitulo {
+                        padding-bottom: 6%;
+                        font-weight: bold;
+                    }
+                }
+                .boxMasCv {
+                    font-size: larger;
+                    font-weight: bold;
+                    text-align:end;
+                    padding: 4%;
+                    margin-bottom: 4%;
+                    .linkMas {
+                        text-decoration: none;
+                        color: $verde-power;
+                    }
+                }
+                
+            }
+
+        }
+    }
+}

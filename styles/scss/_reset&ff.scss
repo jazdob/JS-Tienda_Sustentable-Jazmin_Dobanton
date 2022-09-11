@@ -2,14 +2,14 @@
     box-sizing: border-box;
     margin:0;
 	padding: 0;
-    cursor: url(././../assets/cursorlindo.png), auto;
+    cursor: url(././../assets/pointer.png), auto;
     background: $miwhite;
 }
 
 body::-webkit-scrollbar {
     width: 7px;
     background: $black;
-    cursor: url(././../assets/cursorlindo.png), auto;
+    cursor: url(././../assets/pointer.png), auto;
 }
 body::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.863);
@@ -25,6 +25,6 @@ body::-webkit-scrollbar-thumb:hover {
     font-family: 'Oswald', sans-serif;
     background-color: $miwhite;
     a {
-        cursor: url(././../assets/cursorclic.png), auto;
+        cursor: url(././../assets/click.png), auto;
     }
 }

@@ -3,18 +3,24 @@
     padding: 0px;
     font-size: 25px;
     font-weight: bold;
-    border: solid salmon;
+    border: solid $verde-power;
     .barrita {
-        margin: 1.3%;
+        margin: 1%;
+        .hamburguesa {
+        color: $gris-oscuro !important;   
+        }
         .barritajr {
             .barritabb {
                 width: 90%;
                 display: flex;
                 justify-content: space-between;
-                .itemDelMenu {
-                    transition: color .3s;
-                    &:hover {
-                        color: $verde-power;
+                .barrita0 {
+                    .itemDelMenu {
+                        color: $gris-oscuro;
+                        transition: color .3s;
+                        &:hover {
+                            color: $verde-power;
+                        }
                     }
                 }
             }

@@ -1,0 +1,54 @@
+@media  screen and (max-width:767px) {
+
+    /* NavBar */
+   .miNav {
+       font-size: 18px;
+       .barrita {
+           .barritajr {
+               .barritachild{
+                   @include miflexbox(flex, column, center);
+               }
+           }
+       }
+   }
+    /* Botones */
+    .miBoton {
+        width: 6rem;
+    }
+
+    /* Footer */
+    .miFooter {
+        .formFooter{
+            margin-top: 4%;
+                .formEmail {
+                    width: 60%;
+                }
+       
+                .boxBtnFooter {
+                    text-align: center;
+                    width: 40%;
+                }
+            }
+        .socialMediaIcon {
+            .boxIcons {
+                margin-top: 4%;
+                margin-bottom: 4%;
+                width: 50%;
+                font-size: 100%;
+            }
+        }
+    }
+
+    .bodyBox {
+        .cv {
+            margin-top: 10%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1610px) {
+    /* NavBar */
+    .miNav {
+        padding-bottom: 3%;
+    }
+}
