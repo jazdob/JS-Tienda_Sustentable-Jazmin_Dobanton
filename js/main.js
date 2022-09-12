@@ -302,7 +302,7 @@ let porPrecio = prompt(
 /* DECLARACIÓN DE CONSTANTES */
 
 const btnSearch = document.querySelector("#btnSearch");
-    miInput = document.getElementById('miInput');
+    miInput = document.querySelector("#miInput");
     saludito = document.getElementById('saludito');
 
 saludito.innerText="💚🍃🌎Hola Jona 🌎🍃💚"
@@ -329,7 +329,7 @@ function filtrarProducto(arr, filtro) {
 }
 
 btnSearch.addEventListener("click", () => {
-    let resultado = filtrarProducto(productos, input.value.toLowerCase());
+    let resultado = filtrarProducto(productos, miInput.value.toLowerCase());
     console.log(resultado);
 });
 
