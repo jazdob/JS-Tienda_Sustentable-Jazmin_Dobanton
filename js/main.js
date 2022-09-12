@@ -204,46 +204,40 @@ resumen(nombreProducto,aPagar,formaDePago) */
 /* OK ENTREGADO Y APROBADO: "Desafío complementario: Incorporar Arrays"
 + "Primera entrega del Proyecto Final"*/
 
-//COPIAR CODIGO
+/*ARRAY Productos 
 
-/* Entrega: "Desafío comp.: Interactuar con HTML"
-+ "Desafío: Incorporar eventos"*/
-
-/* ARRAY Productos */
-
-const productos = [
-    { cod: 1, nombre: "cepillo", precio: 100, categoria: "capilar", img: "cepillo.jpg" },
+ const productos = [
+    { cod: 1, nombre: "cepillo", precio: 100, img: "cepillo.jpg" },
     { cod: 2, nombre: "shampoo", precio: 200, img: "shampoo.jpg" },
-    { cod: 3, nombre: "acondicionador", precio: 300, categoria: "capilar", img: "acondicionador.jpg" },
-    { cod: 4, nombre: "esponja", precio: 400, categoria: "accesorios", img: "esponja.jpg" },
-    { cod: 5, nombre: "jabon", precio: 500, categoria: "corporal", img: "jabon.jpg" },
-    { cod: 6, nombre: "jabonera", precio: 600, categoria: "accesorios", img: "jabonera.jpg" },
+    { cod: 3, nombre: "acondicionador", precio: 300, img: "acondicionador.jpg" },
+    { cod: 4, nombre: "esponja", precio: 400, img: "esponja.jpg" },
+    { cod: 5, nombre: "jabon", precio: 500, img: "jabon.jpg" },
+    { cod: 6, nombre: "jabonera", precio: 600, img: "jabonera.jpg" },
   ];
-  console.log(productos);
+  console.log(productos);*/
 
-  /* Constructor */
+/* Constructor 
   
-  function Producto(cod, nombre, precio, categoria, img) {
+  function Producto(cod, nombre, precio, img) {
     this.cod = cod;
     this.nombre = nombre;
     this.precio = precio;
-    this.categoria = categoria;
     this.img = img;
-  }
+  }*/
 
-  /* Método push constructor */
+/* Método push constructor
   
-  const nuevoProducto = new Producto(7, "vela", 700, "accesorios", "vela.JPG");
+ const nuevoProducto = new Producto(7, "vela", 700, "vela.JPG");
   
   function cargarProducto(arr, valor) {
     arr.push(valor);
   }
   
-  cargarProducto(productos, nuevoProducto);
+  cargarProducto(productos, nuevoProducto); */
 
-   /* Método filtrado por nombre de producto */
+/* Método filtrado por nombre de producto
   
-  function filtrarProducto(arr, filtro) {
+function filtrarProducto(arr, filtro) {
     const filtrado = arr.filter((el) => {
       return el.nombre.includes(filtro);
     });
@@ -254,12 +248,12 @@ const productos = [
   
   const resultado = filtrarProducto(productos, ingreso.toLocaleLowerCase());
 
-  console.log(resultado);
+  console.log(resultado); */
 
   
-    /* Método filtrado por mayor/menor */
+/* Método filtrado por mayor/menor
 
-  let porRangoPrecio = prompt(
+let porRangoPrecio = prompt(
     "Selecciona una criterio de ordenamiento \n 1 - Precio menor a $ 500 \n 2 - Precio mayor a $ 500"
   );
 
@@ -277,12 +271,11 @@ const productos = [
     });
   }
   const rangoPrecio = filtrarRangoPrecio(productos, porRangoPrecio);
-  console.log(rangoPrecio);
+  console.log(rangoPrecio); */
   
+/* Método filtrado por precio ingresado por usuario
 
-    /* Método filtrado por precio ingresado por usuario*/
-
-    let porPrecio = prompt(
+let porPrecio = prompt(
         "Quiero filtrar los productos \n 1 - Con un precio menor a $ .... \n 2 - Con un precio mayor a $ ...."
       );
 
@@ -301,5 +294,42 @@ const productos = [
     });
   }
   const precio = filtrarPorPrecio(productos, porPrecio);
-  console.log(precio);
-  
+  console.log(precio);*/
+
+/* Entrega: "Desafío comp.: Interactuar con HTML"
+
+
+/* DECLARACIÓN DE CONSTANTES */
+
+const btnSearch = document.querySelector("#btnSearch");
+    miInput = document.getElementById('miInput');
+    saludito = document.getElementById('saludito');
+
+saludito.innerText="💚🍃🌎Hola Jona 🌎🍃💚"
+
+/* Entrega: "Desafío: Incorporar eventos"*/
+
+/* ARRAY Productos */
+const productos = [
+    { cod: 1, nombre: "cepillo", precio: 100, categoria: "capilar", img: "cepillo.jpg" },
+    { cod: 2, nombre: "shampoo", precio: 200, img: "shampoo.jpg" },
+    { cod: 3, nombre: "acondicionador", precio: 300, categoria: "capilar", img: "acondicionador.jpg" },
+    { cod: 4, nombre: "esponja", precio: 400, categoria: "accesorios", img: "esponja.jpg" },
+    { cod: 5, nombre: "jabon", precio: 500, categoria: "corporal", img: "jabon.jpg" },
+    { cod: 6, nombre: "jabonera", precio: 600, categoria: "accesorios", img: "jabonera.jpg" },
+];
+
+console.log(productos);
+
+function filtrarProducto(arr, filtro) {
+    const filtrado = arr.filter((el) => {
+        return el.nombre.includes(filtro);
+    });
+    return filtrado;
+}
+
+btnSearch.addEventListener("click", () => {
+    let resultado = filtrarProducto(productos, input.value.toLowerCase());
+    console.log(resultado);
+});
+

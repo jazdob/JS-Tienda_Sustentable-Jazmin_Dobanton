@@ -56,8 +56,9 @@
         </header>
         <!--Fin de la cabecera de la página-->
         <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 boxSearch">
+          <p id="saludito"></p>
           <form class="d-flex miFormSearch" role="search">
-            <input class="form-control me-2 miInputSearch" type="search" placeholder="Buscar" aria-label="Search">
+            <input id="miInput" class="form-control me-2 miInputSearch" type="text" placeholder="Buscar" aria-label="Search" value="" name="search">
             <div class="form-check boxCheck">
               <input class="form-check-input  miCheck" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
               <label class="form-check-label miCheck" for="flexRadioDefault2">
@@ -82,7 +83,7 @@
                 Corporal
               </label>
             </div>
-            <button class="miBoton" type="submit">Buscar</button>
+            <button id="btnSearch" class="miBoton">Buscar</button>
           </form>
         </div>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 cv">
