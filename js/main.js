@@ -296,13 +296,13 @@ let porPrecio = prompt(
   const precio = filtrarPorPrecio(productos, porPrecio);
   console.log(precio);*/
 
-/* Entrega: "Desafío comp.: Interactuar con HTML"
 
+/* Entrega: "Desafío comp.: Interactuar con HTML" */
 
 /* DECLARACIÓN DE CONSTANTES */
 
-const btnSearch = document.querySelector("#btnSearch");
-    miInput = document.querySelector("#miInput");
+const btnSearch = document.querySelector("#btnSearch"),
+    miInput = document.querySelector("#miInput"),
     saludito = document.getElementById('saludito');
 
 saludito.innerText="💚🍃🌎Hola Jona 🌎🍃💚"
@@ -332,4 +332,3 @@ btnSearch.addEventListener("click", () => {
     let resultado = filtrarProducto(productos, miInput.value.toLowerCase());
     console.log(resultado);
 });
-
