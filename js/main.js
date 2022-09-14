@@ -302,7 +302,7 @@ let porPrecio = prompt(
 /* DECLARACIÓN DE CONSTANTES */
 
 const btnSearch = document.querySelector("#btnSearch"),
-    miInput = document.querySelector("#miInput"),
+    miInput = document.getElementById('miInput'),
     saludito = document.getElementById('saludito');
 
 saludito.innerText="💚🍃🌎Hola Jona 🌎🍃💚"
@@ -312,7 +312,7 @@ saludito.innerText="💚🍃🌎Hola Jona 🌎🍃💚"
 /* ARRAY Productos */
 const productos = [
     { cod: 1, nombre: "cepillo", precio: 100, categoria: "capilar", img: "cepillo.jpg" },
-    { cod: 2, nombre: "shampoo", precio: 200, img: "shampoo.jpg" },
+    { cod: 2, nombre: "shampoo", precio: 200, categoria: "capilar", img: "shampoo.jpg" },
     { cod: 3, nombre: "acondicionador", precio: 300, categoria: "capilar", img: "acondicionador.jpg" },
     { cod: 4, nombre: "esponja", precio: 400, categoria: "accesorios", img: "esponja.jpg" },
     { cod: 5, nombre: "jabon", precio: 500, categoria: "corporal", img: "jabon.jpg" },
@@ -327,8 +327,10 @@ function filtrarProducto(arr, filtro) {
     });
     return filtrado;
 }
+console.log(btnSearch);
 
-btnSearch.addEventListener("click", () => {
+btnSearch.addEventListener("click", (e) => {
+    e.preventDefault()
     let resultado = filtrarProducto(productos, miInput.value.toLowerCase());
     console.log(resultado);
 });
