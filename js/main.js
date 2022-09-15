@@ -297,9 +297,9 @@ let porPrecio = prompt(
   console.log(precio);*/
 
 
-/* Entrega: "Desafío comp.: Interactuar con HTML" */
+/* OK ENTREGADO Y APROBADO: "Desafío comp.: Interactuar con HTML" 
 
-/* DECLARACIÓN DE CONSTANTES */
+//DECLARACIÓN DE CONSTANTES
 
 const btnSearch = document.querySelector("#btnSearch"),
     miInput = document.getElementById('miInput'),
@@ -307,7 +307,37 @@ const btnSearch = document.querySelector("#btnSearch"),
 
 saludito.innerText="💚🍃🌎Hola Jona 🌎🍃💚"
 
+//ARRAY Productos
+
+const productos = [
+    { cod: 1, nombre: "cepillo", precio: 100, categoria: "capilar", img: "cepillo.jpg" },
+    { cod: 2, nombre: "shampoo", precio: 200, categoria: "capilar", img: "shampoo.jpg" },
+    { cod: 3, nombre: "acondicionador", precio: 300, categoria: "capilar", img: "acondicionador.jpg" },
+    { cod: 4, nombre: "esponja", precio: 400, categoria: "accesorios", img: "esponja.jpg" },
+    { cod: 5, nombre: "jabon", precio: 500, categoria: "corporal", img: "jabon.jpg" },
+    { cod: 6, nombre: "jabonera", precio: 600, categoria: "accesorios", img: "jabonera.jpg" },
+];
+
+console.log(productos);
+
+function filtrarProducto(arr, filtro) {
+    const filtrado = arr.filter((el) => {
+        return el.nombre.includes(filtro);
+    });
+    return filtrado;
+}
+console.log(btnSearch);
+
+btnSearch.addEventListener("click", (e) => {
+    e.preventDefault()
+    let resultado = filtrarProducto(productos, miInput.value.toLowerCase());
+    console.log(resultado);
+});*/
+
 /* Entrega: "Desafío: Incorporar eventos"*/
+
+const btnSearch = document.querySelector("#btnSearch"),
+    miInput = document.getElementById('miInput');
 
 /* ARRAY Productos */
 const productos = [
@@ -330,7 +360,7 @@ function filtrarProducto(arr, filtro) {
 console.log(btnSearch);
 
 btnSearch.addEventListener("click", (e) => {
-    e.preventDefault()
+    e.preventDefault() //Para evitar recarga de página//
     let resultado = filtrarProducto(productos, miInput.value.toLowerCase());
     console.log(resultado);
 });
